@@ -1,0 +1,9 @@
+let p1 = new Promise((resolve, reject)=>{
+        setTimeout(()=> resolve("Resolved p1"), 1500);
+    });
+let p2 = new Promise((resolve, reject)=>{
+        setTimeout(()=> resolve("Resolved p2"), 2500);
+    });
+Promise.all([p1,p2])
+.then((value)=> console.log(value))
+.catch((error)=> console.log(error))
