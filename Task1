@@ -1,0 +1,15 @@
+function delayedGreeting() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Hello, World!");
+        }, 2000);
+    });
+}
+
+delayedGreeting()
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        console.error(error);
+    });
