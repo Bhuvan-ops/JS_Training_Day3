@@ -1,0 +1,20 @@
+let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (Math.random() < 0.5) {
+            resolve("Resolved the promise");
+        } else {
+            reject("Error!");
+        }
+    }, 2000);
+});
+
+p
+    .then((message) => {
+        console.log(message);
+    })
+    .catch((error) => {
+        console.error(error);
+    })
+    .finally(() => {
+        console.log("Operation completed");
+    });
