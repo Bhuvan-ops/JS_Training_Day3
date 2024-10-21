@@ -1,0 +1,13 @@
+async function allPromises(){
+let p1 = new Promise((resolve, reject)=>{
+        setTimeout(()=> resolve("Resolved p1"), 1500);
+    });
+let p2 = new Promise((resolve, reject)=>{
+        setTimeout(()=> resolve("Resolved p2"), 2500);
+    });
+    let results = await Promise.all([p1, p2]);
+    return results;
+}
+allPromises().then((value)=>{
+    console.log(value)
+})
